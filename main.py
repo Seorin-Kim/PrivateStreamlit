@@ -83,18 +83,12 @@ if uploaded_file is not None:
                 sel_date_sum = menu_df[menu_df['날짜'].isin(sel_date)]['필요봉지수'].sum()
                 if i % 3 == 0:
                     col1.subheader(f"{cls_df['품목'][i]} ({sel_date_sum})")
-                    # col1.markdown(f"**{cls_df['품목'][i]}**")
-                    # col1.metric('합', sel_date_sum)
                     col1.dataframe(menu_df, hide_index=True)
                 elif i % 3 == 1:
                     col2.subheader(f"{cls_df['품목'][i]} ({sel_date_sum})")
-                    # col2.markdown(f"**{cls_df['품목'][i]}**")
-                    # col2.metric('합', sel_date_sum)
                     col2.dataframe(menu_df, hide_index=True)
                 else:
                     col3.subheader(f"{cls_df['품목'][i]} ({sel_date_sum})")
-                    # col3.markdown(f"**{cls_df['품목'][i]}**")
-                    # col3.metric('합', sel_date_sum)
                     col3.dataframe(menu_df, hide_index=True)
             
 
